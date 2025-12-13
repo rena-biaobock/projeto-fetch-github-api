@@ -118,7 +118,15 @@ main {
 .container .profile-data .info p{
   font-size: 15px;  
   font-weight: 400;
-  line-height: 23px;
+  line-height: 30px;
+}
+
+.container .profile-data .info p#follow > i {
+  margin-right: 7px;
+}
+
+.container .profile-data .info p#follow > i {
+  margin-right: 7px;
 }
 
 /* REPOSITORIES */
