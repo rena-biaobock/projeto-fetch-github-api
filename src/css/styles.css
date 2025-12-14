@@ -156,6 +156,19 @@ main {
   color: #fff;
 }
 
+.container .profile-data .repositories ul li a ul {
+  gap: 5px;
+  margin-top: 7px;
+}
+
+.container .profile-data .repositories ul li a ul li {
+  color: white;
+  background-color: purple;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 12px;
+}
+
 .container .profile-data .events h2 {
   margin-bottom: 30px;
   text-align: center;
