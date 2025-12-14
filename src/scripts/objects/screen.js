@@ -53,7 +53,7 @@ const screen = {
           }</a> - ${this.emojify(eventCommit.commit.message)}</li>`;
         } catch (error) {
           console.error("Error fetching commit message:", error);
-          eventItens += `<li><a href="" target="_blank">${event.repo.name}</a> - "Erro ao buscar mensagem de commit"</li>`;
+          eventItens += `<li><a href="${event.repo.url}" target="_blank">${event.repo.name}</a> - "Erro ao buscar mensagem de commit"</li>`;
         }
       }
     }
