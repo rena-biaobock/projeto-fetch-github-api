@@ -3,7 +3,7 @@ import { getRepositories } from "./services/repositories.js";
 import { getEvents } from "./services/events.js";
 
 import { user } from "./objects/user.js";
-import { screen } from "./objects/screen.js";   
+import { screen } from "./objects/screen.js";
 
 document.querySelector("#btn-search").addEventListener("click", () => {
   const userName = document.querySelector("#input-search").value;
@@ -38,8 +38,7 @@ async function getUserData(userName) {
 
   user.setInfo(userResponse);
   user.setRepositories(repositoriesResponse);
+  user.setEvents(eventsResponse);
 
   screen.renderUser(user);
-
-  console.log(eventsResponse);
 }
