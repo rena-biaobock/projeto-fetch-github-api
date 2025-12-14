@@ -40,7 +40,7 @@ const screen = {
     let eventItens = "";
     for (const event of user.events) {
       if (event.type == "CreateEvent") {
-        eventItens += `<li><a href="" target="_blank">${event.repo.name}</a> - "Sem mensagem de commit"</li>`;
+        eventItens += `<li><a href="https://github.com/${event.repo.name}" target="_blank">${event.repo.name}</a> - "Sem mensagem de commit"</li>`;
       }
       if (event.type == "PushEvent") {
         try {
@@ -48,12 +48,14 @@ const screen = {
             event.repo.name,
             event.payload.head
           );
-          eventItens += `<li><a href="" target="_blank">${
+          eventItens += `<li><a href="https://github.com/${
             event.repo.name
-          }</a> - ${this.emojify(eventCommit.commit.message)}</li>`;
+          }" target="_blank">${event.repo.name}</a> - ${this.emojify(
+            eventCommit.commit.message
+          )}</li>`;
         } catch (error) {
           console.error("Error fetching commit message:", error);
-          eventItens += `<li><a href="${event.repo.url}" target="_blank">${event.repo.name}</a> - "Erro ao buscar mensagem de commit"</li>`;
+          eventItens += `<li><a href="https://github.com/${event.repo.name}" target="_blank">${event.repo.name}</a> - "Erro ao buscar mensagem de commit"</li>`;
         }
       }
     }
