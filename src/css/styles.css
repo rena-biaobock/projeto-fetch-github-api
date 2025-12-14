@@ -162,7 +162,16 @@ main {
 }
 
 .container .profile-data .events ul {
-  line-height: 30px;
+  text-align: left;
+}
+
+.container .profile-data .events ul li {
+  margin-bottom: 15px;
+}
+
+.container .profile-data .events ul li a::before {
+  content: "📌";
+  margin-right: 5px;
 }
 
 .container .profile-data .events ul li a {
